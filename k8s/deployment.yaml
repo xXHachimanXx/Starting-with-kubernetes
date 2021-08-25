@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: goserver
-          image: "xhachimanx/hello-go:v5.2"
+          image: "xhachimanx/hello-go:v5.3"
 
           envFrom:
             - configMapRef:
