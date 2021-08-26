@@ -18,6 +18,13 @@ spec:
         - name: goserver
           image: "xhachimanx/hello-go:v5.5"
 
+          startupProbe:
+            httpGet:
+              path: /healthz
+              port: 8000
+            periodSeconds: 4
+            failureThreshold: 30
+
           readinessProbe:
             httpGet:
               path: /healthz
