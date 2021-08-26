@@ -18,6 +18,14 @@ spec:
         - name: goserver
           image: "xhachimanx/hello-go:v5.5"
 
+          resources:
+            requests:
+              cpu: 100m # 100 milicores (0.1 vCPU)
+              memory: 20Mi
+            limits:
+              cpu: 300m # 300 milicores (0.3 vCPU)
+              memory: 25Mi
+
           startupProbe:
             httpGet:
               path: /healthz
